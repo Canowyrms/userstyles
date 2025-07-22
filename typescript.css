@@ -1,0 +1,35 @@
+@-moz-document domain("typescriptlang.org") {
+/**
+ * Typescript Dev Docs Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+#handbook-content {
+	/*font-family: Castoro;*/
+	/*font-size: 1.25em;*/
+
+	/*font-family: 'Libre Baskerville';*/
+	/*font-size: 1.15em;*/
+
+	font-family: 'Noto Serif';
+	font-size: 1.25em;
+
+	p {
+		line-height: 1.5;
+	}
+}
+
+.markdown {
+	h1 {}
+	h2 {}
+	h3 { font-size: 1.1875em }
+	blockquote { font-size: 0.8em }
+
+	code {
+		font-family: 'Fira Code Retina';
+		line-height: 1.5;
+	}
+}
+
+}

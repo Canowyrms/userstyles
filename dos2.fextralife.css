@@ -1,0 +1,74 @@
+@-moz-document domain("divinityoriginalsin2.wiki.fextralife.com") {
+/**
+ * DOS2 FextraLife Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+#wrapper {
+	padding-left: 0;
+}
+
+/* #wiki-content-block > .table-responsive .wiki_table {
+	width: auto !important;
+	min-width: max-content !important;
+} */
+/* #wiki-content-block > .table-responsive .wiki_table thead * {
+	min-width: max-content !important;
+} */
+#wiki-content-block > .table-responsive .wiki_table tr {
+	height: auto !important;
+}
+/* #wiki-content-block > .table-responsive .wiki_table th, 
+#wiki-content-block > .table-responsive .wiki_table td {
+	min-width: max-content !important;
+	height: 4em !important;
+} */
+#wiki-content-block > .table-responsive .wiki_table th:last-child,
+#wiki-content-block > .table-responsive .wiki_table td:last-child {
+	min-width: unset !important;
+}
+/* .wiki_table tr td:not(:first-child) img {
+	display: none;
+} */
+/* #wiki-content-block > .table-responsive .wiki_table p {
+	min-width: max-content;
+	margin: 0;
+} */
+}
+
+@-moz-document url("https://divinityoriginalsin2.wiki.fextralife.com/Runes") {
+#wiki-content-block > .table-responsive .wiki_table th:nth-child(2),
+#wiki-content-block > .table-responsive .wiki_table td:nth-child(2),
+#wiki-content-block > .table-responsive .wiki_table th:nth-child(3),
+#wiki-content-block > .table-responsive .wiki_table td:nth-child(3),
+#wiki-content-block > .table-responsive .wiki_table th:nth-child(4),
+#wiki-content-block > .table-responsive .wiki_table td:nth-child(4) {
+	display: none;
+}
+
+#wiki-content-block > .table-responsive .wiki_table tr,
+#wiki-content-block > .table-responsive .wiki_table th,
+#wiki-content-block > .table-responsive .wiki_table td {
+	height: min-content !important;
+	height: 52px !important;
+}
+#wiki-content-block > .table-responsive .wiki_table td {
+	vertical-align: top;
+}
+#wiki-content-block > .table-responsive .wiki_table td p {
+	height: min-content !important;
+	margin: 0;
+}
+
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+2):not(:nth-child(1n+22)),
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+30):not(:nth-child(1n+33)),
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+34):not(:nth-child(1n+38)),
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+39):not(:nth-child(1n+43)),
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+44):not(:nth-child(1n+48)),
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+49):not(:nth-child(1n+53)),
+#wiki-content-block > .table-responsive .wiki_table tr:nth-child(1n+54):not(:nth-child(1n+58)) {
+	display: none;
+}
+
+}

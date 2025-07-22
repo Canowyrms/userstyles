@@ -1,0 +1,34 @@
+@-moz-document domain("discord.com") {
+/**
+ * Discord Tweaks
+ *
+ * Updated: 2025-07-14
+ */
+
+/*
+:root {
+	--bm-message-width: 75ch;
+}
+
+li[class*="messageListItem"] {
+	max-width: var(--bm-message-width);
+	margin-top: 0.5rem
+}
+
+div[class*="channelTextArea"] {
+	max-width: max-content;
+}
+div[class*="channelTextArea"] div[class*="textAreaSlate"] {
+	flex: 1 1 var(--bm-message-width);
+	width: var(--bm-message-width);
+	max-width: 100%;
+}
+*/
+
+ul[aria-label="Direct Messages"] {
+	li:has(a[href="/shop"], a[href="/store"]) {
+		display: none;
+	}
+}
+
+}

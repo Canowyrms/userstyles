@@ -1,0 +1,45 @@
+@-moz-document domain("reddit.com") {
+/**
+ * Reddit API Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+.content.api-help {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	max-width: unset;
+
+	.sidebar {
+		margin-top: 20px;
+
+		.head {
+			display: none;
+		}
+		.toc {
+			width: auto;
+			max-width: max-content;
+			background: #181818;
+
+			li a {
+				display: inline-block;
+
+				&::after {
+					content: '';
+				}
+			}
+
+			.mode-selector {
+				display: block;
+				width: max-content;
+			}
+		}
+	}
+	.contents {
+		max-width: 960px;
+		margin-left: 0;
+	}
+}
+
+}

@@ -1,0 +1,84 @@
+@-moz-document domain("5e.tools") {
+/**
+ * 5e Tools Tweaks
+ *
+ * Updated: 2025-03-01
+ */
+
+
+/* ????
+.stats--book {
+	font-size: 16px;
+}
+*/
+
+
+/* Broad tweaks */
+
+.classes .stats,
+.stats,
+.stats--book,
+.cls-nav {
+	font-family: 'VC Honey', serif;
+}
+.classes .stats {}
+.stats {}
+.stats--book {}
+.cls-nav {}
+
+/* Stats sidebar and headings in main content */
+.stats {
+	font-size: 14px;
+}
+
+
+
+
+/* Description pop-out window */
+.hwin .stats {
+	font-size: 18px;
+}
+
+
+
+
+/* Main page content */
+
+#pagecontent {
+	.rd__b {
+		font-size: 18px;
+
+		p { margin-bottom: 0.5rem; }
+	}
+
+	.entry-title-inner::before {
+		width: 20px;
+		height: 20px;
+		top: 10px;
+		right: 22px;
+		font-size: 16px;
+	}
+}
+
+
+
+/* Stats/nav sidebar */
+
+#statsprof {
+	.cls-side__section {
+		font-size: 1em;
+	}
+}
+
+#sticky-nav {}
+
+/* Outline navigation */
+.cls-nav {
+	font-size: 16px;
+	
+	.cls-nav__item {
+		margin-bottom: 0.25rem;
+	}
+}
+
+}

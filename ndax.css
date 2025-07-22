@@ -1,0 +1,18 @@
+@-moz-document domain("ndax.io") {
+/**
+ * NDAX Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+.ndax-trade-instrument-selector__table,
+.ndax-trade-instrument-selector__table > tr {
+	height: max-content;
+}
+
+.ndax-trade-instrument-selector__table > tr:not(:first-child) th,
+.ndax-trade-instrument-selector__table > tr:not(:first-child) td {
+	padding: 1rem 0;
+}
+
+}

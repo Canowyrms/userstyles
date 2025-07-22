@@ -1,0 +1,125 @@
+/**
+ * ShortGirlTallOrder Tweaks
+ *
+ * ✅ GitHub Gist
+ * Applies to: https?:\/\/(www\.)?shortgirltallorder\.com\/wprm_print\/.+
+ */
+
+:root {
+	--font-family-serif: 'Libre Baskerville', Georgia, serif;
+	--font-family-sans: 'Open Sans', sans-serif;
+}
+
+.wprm-recipe {
+	width: 100% !important;
+	max-width: unset;
+
+	a {
+		text-decoration: none;
+		color: initial !important;
+	}
+}
+
+.wprm-recipe-template-recipe-template-2 {
+	border: none !important;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-family-sans);
+	}
+	&, p, li {
+		font-family: var(--font-family-serif);
+	}
+	.wprm-recipe-header {
+		margin-bottom: 0.4em !important;
+	}
+}
+
+.wprm-recipe-template-recipe-template-2-container,
+.wprm-recipe-template-recipe-template-2-header {
+	background: #fff;
+}
+
+.wprm-recipe-ingredients-container {
+	display: flex;
+	flex-flow: row wrap;
+
+	h3 {
+		width: 100%;
+	}
+
+	.wprm-recipe-ingredient-group:has(+ .wprm-recipe-ingredient-group) {
+		width: 50%;
+		padding-right: 20px;
+	}
+
+	.wprm-recipe-ingredient-group:nth-of-type(2) {
+		width: 50%;
+	}
+
+	.wprm-recipe-ingredient-group-name {
+		margin-top: 0.2em !important;
+		margin-bottom: 0.6em !important;
+	}
+}
+
+.wprm-recipe-ingredients {
+	> li {
+		padding-top: 2px !important;
+		padding-bottom: 2px !important;
+		font-family: var(--font-family-serif);
+	}
+	> li:nth-child(even) {
+		background: #fafafa;
+	}
+}
+
+.wprm-recipe-instructions-container,
+.wprm-recipe-notes-container {
+	page-break-before: always;
+}
+
+.wprm-recipe-instructions-container .wprm-recipe-instruction-group-name {
+	margin-top: 0.8em !important;
+	margin-bottom: 0.6em !important;
+}
+
+/**
+ * Nutrition labels
+ */
+.wprm-nutrition-label-container {
+	> span:nth-child(odd) {
+		display: block;
+		width: max-content;
+	}
+
+	> span:nth-child(even) {
+		display: none;
+	}
+
+	> span:nth-child(4n+3) {
+		background: #fafafa;
+	}
+}
+
+.wprm-nutrition-label-text-nutrition-label {
+	display: inline-block;
+	min-width: 200px;
+	color: #000 !important;
+
+}
+
+.wprm-nutrition-label-text-nutrition-value {
+	display: inline-block;
+	min-width: 32px;
+	text-align: right;
+	padding-right: 4px;
+}
+
+.wprm-nutrition-label-text-nutrition-unit {
+	display: inline-block;
+	min-width: 100px
+}
+
+.wprm-call-to-action {
+	display: none !important;
+}

@@ -1,0 +1,72 @@
+@-moz-document domain("reddit.com") {
+/**
+ * Reddit Tweaks
+ *
+ * Last updated: 2024-12-01
+ */
+
+/**
+ * Global / multi-page
+ */
+
+/* Readbility tweaks */
+body {
+	font-family: "Noto Sans", sans-serif !important;
+
+	.top-matter a.title,
+	.usertext-body,
+	.res-expando-box {
+		font-family: "VC Honey", serif !important;
+	}
+	
+	.top-matter {
+		.title {
+			font-size: 24px !important;
+			font-weight: 600;
+			line-height: 1;
+
+			.domain {
+				font-weight: normal;
+			}
+		}
+		.tagline {
+			font-size: 12px !important;
+		}
+	}
+	
+	.usertext-body {
+		max-width: 50em;
+		font-size: 1.3em;
+
+		.md p {
+			white-space: pre-wrap;
+		}
+	}
+	.entry .usertext-body {
+		/*font-size: 1.4em;*/
+		font-size: 18px;
+	}
+	.res-expando-box .res-caption {
+		font-size: 18px;
+	}
+}
+
+body.listing-page {
+	.top-matter p.title {
+		display: inline-block;
+		max-width: 50em;
+	}
+}
+/* ./readability */
+
+
+/**
+ * Single
+ */
+
+/* Fix sidebar overflow */
+div.side {
+	overflow: hidden;
+}
+
+}

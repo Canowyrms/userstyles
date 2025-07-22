@@ -1,0 +1,6 @@
+# git-crypt
+
+"ar.css"  filter=git-crypt diff=git-crypt
+"gc.css"  filter=git-crypt diff=git-crypt
+"mam.css" filter=git-crypt diff=git-crypt
+"nya.css" filter=git-crypt diff=git-crypt

@@ -1,0 +1,20 @@
+@-moz-document domain("developer.wordpress.org") {
+/**
+ * WP Dev Docs Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+.single-handbook #content {
+	max-width: 1400px;
+}
+
+.wporg-developer-code-block {
+	&,
+	code,
+	span {
+		font-family: 'FiraCode Nerd Font' !important;
+	}
+}
+
+}

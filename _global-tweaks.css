@@ -1,0 +1,11 @@
+/**
+ * Global Tweaks
+ *
+ * Updated: 2025-07-22
+ */
+
+/* Better monospace font */
+code,
+pre {
+	font-family: 'Fira Code Retina', monospace !important
+}

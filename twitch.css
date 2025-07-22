@@ -1,0 +1,21 @@
+@-moz-document domain("twitch.tv") {
+/**
+ * Twitch Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+#bttv-picture-in-picture {
+	display: none !important;
+}
+
+.chat-input>div:last-child .chat-input__buttons-container {
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+.video-player video {
+	height: auto;
+}
+
+}

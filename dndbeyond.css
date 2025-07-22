@@ -1,0 +1,79 @@
+@-moz-document domain("dndbeyond.com") {
+/**
+ * D&D Beyond Tweaks
+ *
+ * Updated: 2025-06-20
+ */
+
+/* Fixes character sheet page being slightly taller than viewport */
+body.body-rpgcharacter-sheet {
+	overflow: hidden;
+}
+
+/* Just a teensy bit more specificity to ensure overrides. */
+html {
+	/* Less distracting background */
+	main {
+		background: #2b2b2a;
+	}
+
+	/* Fix damage rolls spilling over more than one line */
+	.ddbc-combat-attack__damage .ddbc-damage {
+		word-break: initial;
+	}
+
+	/* Fix inconsistent padding in damage roll buttons */
+	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container {
+		&, &:hover {
+			padding: 7px;
+		}
+		&:hover {
+			margin-inline: -1px;
+		}
+	}
+	
+	/* Fix shitty spacing & sizing of item customization elements */
+	.ct-customize-data-editor__property--description,
+	.ct-customize-data-editor__property--name,
+	.ct-customize-data-editor__property--notes,
+	.ct-customize-data-editor__property--snippet {
+		flex-flow: column-reverse;
+		align-items: flex-start;
+		padding-right: 0;
+
+		.ct-customize-data-editor__property-label {
+			margin-left: 0;
+			margin-bottom: 4px;
+		}
+
+		.ct-customize-data-editor__property-value {
+			width: 100%;
+			height: auto;
+
+			textarea {
+				width: 100%;
+				min-height: 10lh;
+			}
+		}
+	}
+
+	.ct-value-editor--compact {
+		.ct-value-editor__property--8,
+		.ct-value-editor__property--9 {
+			flex-flow: column-reverse;
+			align-items: flex-start;
+			padding-right: 0;
+
+			.ct-value-editor__property-value {
+				width: 100%;
+			}
+
+			.ct-value-editor__property-label {
+				margin-left: 0;
+				margin-bottom: 4px;
+			}
+		}
+	}
+}
+
+}

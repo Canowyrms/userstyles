@@ -1,0 +1,21 @@
+@-moz-document domain("chatgpt.com") {
+/**
+ * ChatGPT Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+div.text-message[data-message-author-role="assistant"] {
+	font-family: 'VC Honey', sans-serif;
+	/*
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	*/
+	
+	.prose {
+		font-size: 1.25rem;
+	}
+}
+
+}

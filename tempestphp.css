@@ -1,0 +1,17 @@
+@-moz-document domain("tempestphp.com") {
+/**
+ * TempestPHP Tweaks
+ *
+ * Updated: 2025-06-22
+ */
+
+/* Holy shit this animation COOKS other hwaccel tasks */
+#rain-container {
+	display: none;
+
+	+ div[class~="not-motion-reduce:after:animate-aurora"] {
+		display: none;
+	}
+}
+
+}

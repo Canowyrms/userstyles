@@ -1,0 +1,50 @@
+@-moz-document domain("nexusmods.com") {
+/**
+ * NexusMods Tweaks
+ *
+ * Last updated: 2025-07-22
+ */
+
+/* Improve pagination display on mod browse pages. */
+nav[aria-label="Pagination navigation"] {
+	justify-content: center;
+	
+	& > :nth-child(2) {
+		display: none;
+	}
+	
+	button[title="Previous page"],
+	button[title="Next page"] {
+		border-radius: 4px;
+		outline: 1px solid;
+		padding-inline: 4px;
+		
+		&:focus {
+			outline-offset: 0;
+		}
+	}
+}
+
+}
+
+@-moz-document domain("next.nexusmods.com") {
+/* Wider page when browsing mods. */
+.next-container {
+	width: 100%;
+	
+	@media (width < 1281px)  { padding-inline: calc(var(--spacing) * 6); }
+	@media (width >= 1281px) { /*padding-inline: calc(var(--spacing) * 8);*/ }
+}
+
+/* Bigger mod cards, thus, bigger mod card images. */
+.mods-grid {
+	--bk_columns: 1;
+
+	grid-template-columns: repeat(var(--bk_columns), 1fr);
+
+	@media (width >= 625px)  { --bk_columns: 2; }
+	@media (width >= 859px)  { --bk_columns: 3; }
+	@media (width >= 1400px) { --bk_columns: 5; }
+}
+
+}

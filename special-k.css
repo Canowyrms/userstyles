@@ -1,0 +1,13 @@
+@-moz-document domain("wiki.special-k.info") {
+/**
+ * Special K Wiki Tweaks
+ *
+ * Updated: 2025-06-24
+ */
+
+/* The page is too wide, it sucks to read. */
+.contents {
+	max-width: 960px;
+}
+
+}

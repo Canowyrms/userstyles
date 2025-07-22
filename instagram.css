@@ -1,0 +1,40 @@
+@-moz-document domain("instagram.com") {
+/**
+ * Instagram Tweaks
+ *
+ * Updated: 2025-07-13
+ */
+
+/* Fix right-click on images */
+/* No longer needed? */
+/*div:has(> img) {
+	z-index: 999;
+}*/
+
+
+/* Fix shit in front of <video> */
+/*
+video + div > div {
+	pointer-events: none;
+}
+*/
+
+/* Bigger reels */
+section > main > div[class]:not([data-visualcompletion]) {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1084px;
+	padding: 20px 20px 0;
+	margin: 0 auto;
+	
+	& > div:first-child {
+		max-width: 100% !important;
+	}
+}
+
+/* Remove reel linear gradient */
+.x1ej3kyw {
+	background-image: none;
+}
+
+}

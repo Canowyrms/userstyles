@@ -1,0 +1,16 @@
+@-moz-document domain("github.com") {
+/**
+ * GitHub Tweaks
+ *
+ * Updated: 2025-03-02
+ */
+
+pre,
+.blob-code-inner,
+.blob-code-inner > *,
+.CodeMirror pre > span,
+.CodeMirror-linenumber {
+	font-family: monospace !important
+}
+
+}
