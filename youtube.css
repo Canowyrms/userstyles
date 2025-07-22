@@ -15,8 +15,8 @@ span.ytp-caption-segment {
 	color: rgba(255, 255, 255, 0.75) !important;
 	font-family: 'Castoro', serif !important;
 	font-weight: 600;
-    letter-spacing: 0.05ch;
-    text-shadow:
+	letter-spacing: 0.05ch;
+	text-shadow:
 		 0.04em  0.04em 0 #000,
 		-0.04em  0.04em 0 #000,
 		-0.04em -0.04em 0 #000,
