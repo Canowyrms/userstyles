@@ -2,12 +2,20 @@
 /**
  * Wikipedia Tweaks
  *
- * Updated: 2025-03-02
+ * Updated: 2025-08-01
  */
 
-#content {
-	font-family: 'Noto Serif';
+body {
+	--background-color-base: #fdf6e3;
+	--background-color-neutral-subtle: #eee8d5;
+	
+	font-family: 'VC Honey', 'Noto Serif', serif;
 	font-size: 20px;
 }
+
+.infobox {
+	background-color: #faf3de;
+}
+
 
 }
