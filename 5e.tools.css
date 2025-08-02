@@ -2,7 +2,7 @@
 /**
  * 5e Tools Tweaks
  *
- * Updated: 2025-03-01
+ * Updated: 2025-08-02
  */
 
 
@@ -18,7 +18,8 @@
 .classes .stats,
 .stats,
 .stats--book,
-.cls-nav {
+.cls-nav,
+.rd__h--0 {
 	font-family: 'VC Honey', serif;
 }
 .classes .stats {}
