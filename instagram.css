@@ -2,7 +2,7 @@
 /**
  * Instagram Tweaks
  *
- * Updated: 2025-07-13
+ * Updated: 2025-08-01
  */
 
 /* Fix right-click on images */
@@ -29,6 +29,9 @@ section > main > div[class]:not([data-visualcompletion]) {
 	
 	& > div:first-child {
 		max-width: 100% !important;
+	}
+	& > div:nth-child(2) {
+		margin-right: 0 !important;
 	}
 }
 
