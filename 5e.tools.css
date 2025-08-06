@@ -2,83 +2,235 @@
 /**
  * 5e Tools Tweaks
  *
- * Updated: 2025-08-02
+ * Updated: 2025-08-05
  */
 
+/**
+ * MARK: Typography
+ */
 
-/* ????
-.stats--book {
-	font-size: 16px;
+body,
+.cls-tbl__disp-name, /* Class table title */
+.rd__h, /* "Heading" class */
+.stats, /* Usually main page content */
+.cls-side__name, /* Class page sidebar stats panel */
+.cls-nav, /* Class page sidebar toc nav */
+h1, h2, h3, h4, h5, h6
+{ 
+	font-family: "VC Honey";
 }
-*/
 
-
-/* Broad tweaks */
-
-.classes .stats,
-.stats,
-.stats--book,
-.cls-nav,
-.rd__h--0 {
-	font-family: 'VC Honey', serif;
+.nav, /* Main nav menu */
+.list, /* Filterable lists */
+.cls-tbl, /* Class features overview table */
+.brew-list, /* Homebrew table */
+.ui-ctx__wrp, /* Right-click menus? */
+.ui-modal__inner /* Filter modals */ {
+	/*font-family: "Rubik";*/
+	font-family: "Sofia Sans";
 }
-.classes .stats {}
-.stats {}
-.stats--book {}
-.cls-nav {}
 
-/* Stats sidebar and headings in main content */
+.list span[class*="source"], /* Filterable list > sources column */
+.fltr__mini-view, /* Filterable list > chip buttons */
+.stats__th-name, /* Stats panel, e.g. spells page > spell description */
+.rd__title-link, /* Usually source book tooltip/link */
+.fltr__container-pills, /* Filter modal > buttons */
+button, input, select, textarea {
+	font-family: "Lexend";
+	/*font-family: "Sofia Pro";*/
+}
+
+/* Insane that THIS is how I need to override some things... */
+@layer vetools {
+	.code {
+		font-family: "0xProto Nerd Font" !important;
+	}
+}
+
+.stats__sect-header-inner {
+	font-weight: 500;
+}
+
+.stats__th-name, /* Stats panel, e.g. spells page > spell description */
+.rd__title-link /* Usually source book tooltip/link */
+{
+	font-variant: normal;
+}
+
+
+/**
+ * Reference type-scale
+ *
+ * h1 - 1.8em
+ * h2 - 1.6em
+ * h3 - 1.42em
+ * h4 - 1.27em
+ * h5 - 1.13em
+ * h6 - 1em
+ */
+
+/* Usually main page content */
 .stats {
-	font-size: 14px;
-}
-
-
-
-
-/* Description pop-out window */
-.hwin .stats {
 	font-size: 18px;
+
+	.rd__h--0, .rd__h--0--inset { font-size: 1.42em }
+	.rd__h--1, .rd__h--1--inset { font-size: 1.27em }
+	.rd__h--2, .rd__h--2--inset { font-size: 1.13em }
+	.rd__h--3, .rd__h--3--inset { font-size: 1em }
 }
-
-
-
-
-/* Main page content */
-
-#pagecontent {
-	.rd__b {
-		font-size: 18px;
-
-		p { margin-bottom: 0.5rem; }
-	}
-
-	.entry-title-inner::before {
-		width: 20px;
-		height: 20px;
-		top: 10px;
-		right: 22px;
-		font-size: 16px;
-	}
-}
-
-
-
-/* Stats/nav sidebar */
-
-#statsprof {
-	.cls-side__section {
-		font-size: 1em;
-	}
-}
-
-#sticky-nav {}
-
-/* Outline navigation */
-.cls-nav {
+/* Stat blocks when it's a "sidebar" */
+.wrp-stats-table .stats {
 	font-size: 16px;
-	
-	.cls-nav__item {
-		margin-bottom: 0.25rem;
+}
+
+/* Stats panel main heading */
+.stats__th-name {
+	font-size: 1.42em; /* h3 */
+	/*line-height: 1.27;*/
+	line-height: 1;
+
+	.stats__h-source-abbreviation {
+		font-size: 14px;
+	}
+}
+
+/* Class page sidebar */
+#statsprof {
+	.cls__stats, 
+	.cls-side__section {
+		font-size: 14px;
+	}
+
+	.cls-side__name { font-size: 1.42em; }
+	.cls-side__section-head { font-size: 1.27em; }
+}
+
+.list, /* Filterable lists */
+.cls-tbl /* Class features overview table */ {
+	font-size: 12px;
+}
+
+/* Filterable list inline preview */
+.accordion__wrp-preview {
+	.stats { font-size: 14px; }
+	.stats__th-name { font-size: 1.27em; }
+}
+
+/* Popover windows */
+.hwin {
+	/* Stat content I guess */
+	.stats { font-size: 16px; }
+}
+
+.help {
+	text-underline-offset: 2px;
+}
+
+/***/
+
+
+/**
+ * MARK: Layout
+ */
+
+/* Bootstrap layout container */
+.container {
+	@media (width < 1200px) { width: 100%; }
+}
+
+.col-md-3:has(
+	#statsprof, /* Class sidebar */
+	#sticky-nav /* Document outline navigation */
+) {
+	padding-inline: 0;
+}
+
+.col-md-9:has(
+	#subclasstabs /* Class > subclass filter chips */
+) {
+	@media (width < 991px) { padding-inline: 0; }
+}
+
+/* Class sidebar */
+#statsprof {
+	padding-top: 1px;
+}
+
+/* Document outline navigation */
+#sticky-nav {
+	padding-left: 0;
+
+	.cls-nav__item { margin-bottom: 0.25rem; }
+}
+
+/* Class > subclass filter chips */
+#subclasstabs {
+	margin-top: 0.5rem;
+
+	@media (width > 991px) { margin-top: -3px; }
+}
+
+/* Usually main page content */
+.stats {
+	/* Section heading */
+	.rd__h { margin-top: 0.5em; }
+	/* Inset content */
+	.rd__b-inset { margin: 16px; }
+	/* Inset content heading */
+	.rd__b-inset .rd__h { margin-top: 0; }
+}
+
+/* Stats panel, e.g. spells page > spell description */
+.stats__th-name { padding-top: 1rem; }
+
+/* Race sidebar title */
+.cls-side__name { padding-top: 0.5rem; }
+
+/* Anchor indicator */
+.cls-main__linked-titles > td > * > .rd__h .entry-title-inner:hover::before {
+	content: "🔗";
+	width: 20px;
+	height: 20px;
+	top: 6px;
+	right: 22px;
+	font-size: 16px
+}
+
+.cls__stats,
+.wrp-stats-table {
+	td, th { padding-left: 1rem; padding-right: 1rem; }
+	.stats__th-name { padding-left: 1rem !important; }
+}
+
+/* The buttons underneath a "sidebar" stat content, e.g. Reference > Actions */
+.wrp-stats-table + .ve-flex-vh-center {
+	flex-wrap: wrap;
+
+	> * {
+		margin-bottom: 0.5rem;
+	}
+}
+
+/* Popover windows */
+/*.hwin {}*/
+
+/* Insane that THIS is how I need to override some things... */
+@layer vetools {
+	#subclasstabs {
+		margin-bottom: 8px !important;
+
+		/* The first subclass toggle button */
+		> div:nth-child(2) > button:first-child {
+			margin-left: 0 !important;
+		}
+	}
+
+	.rd__hr--section {
+		margin: 1rem 0;
+	}
+
+	.wrp-stats-table {
+		.stats__th-name { padding-left: 1rem !important; }
 	}
 }
 
