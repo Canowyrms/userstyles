@@ -2,7 +2,7 @@
 /**
  * 5e Tools Tweaks
  *
- * Updated: 2025-08-05
+ * Updated: 2025-08-12
  */
 
 /**
@@ -25,7 +25,8 @@ h1, h2, h3, h4, h5, h6
 .cls-tbl, /* Class features overview table */
 .brew-list, /* Homebrew table */
 .ui-ctx__wrp, /* Right-click menus? */
-.ui-modal__inner /* Filter modals */ {
+.ui-modal__inner, /* Filter modals */
+.omni__output /* Search results */ {
 	/*font-family: "Rubik";*/
 	font-family: "Sofia Sans";
 }
@@ -57,6 +58,9 @@ button, input, select, textarea {
 	font-variant: normal;
 }
 
+/**
+ * MARK: Font sizes
+ */
 
 /**
  * Reference type-scale
@@ -79,8 +83,12 @@ button, input, select, textarea {
 	.rd__h--3, .rd__h--3--inset { font-size: 1em }
 }
 /* Stat blocks when it's a "sidebar" */
-.wrp-stats-table .stats {
-	font-size: 16px;
+.wrp-stats-table {
+	.stats { font-size: 16px; }
+}
+/* Stat blocks when it's a preview in a table */
+.ui-list__wrp-preview {
+	.stats { font-size: 14px; }
 }
 
 /* Stats panel main heading */
@@ -213,6 +221,10 @@ button, input, select, textarea {
 
 /* Popover windows */
 /*.hwin {}*/
+
+/**
+ * MARK: Heavy-duty overrides
+ */
 
 /* Insane that THIS is how I need to override some things... */
 @layer vetools {
