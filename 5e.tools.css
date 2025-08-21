@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6
 }
 
 .nav, /* Main nav menu */
+.home__lbl-page, /* Homepage nav cards */
 .list, /* Filterable lists */
 .cls-tbl, /* Class features overview table */
 .brew-list, /* Homebrew table */
