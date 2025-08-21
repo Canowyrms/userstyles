@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6
 .brew-list, /* Homebrew table */
 .ui-ctx__wrp, /* Right-click menus? */
 .ui-modal__inner, /* Filter modals */
+.toast__wrp-content, /* Toast notifications */
 .omni__output /* Search results */ {
 	/*font-family: "Rubik";*/
 	font-family: "Sofia Sans";
