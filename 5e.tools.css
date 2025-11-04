@@ -193,13 +193,6 @@ button, input, select, textarea {
 	.cls-nav__item { margin-bottom: 0.25rem; }
 }
 
-/* Class > subclass filter chips */
-#subclasstabs {
-	margin-top: 0.5rem;
-
-	@media (width > 991px) { margin-top: -3px; }
-}
-
 /* Usually main page content */
 .stats {
 	/* Section heading */
@@ -263,13 +256,26 @@ button, input, select, textarea {
 
 /* Insane that THIS is how I need to override some things... */
 @layer vetools {
+	/* Class > subclass filter chips */
 	#subclasstabs {
+		margin-top: 0.5rem;
 		margin-bottom: 8px !important;
+		gap: 10px;
+
+		> .m-1, .mr-2 { margin: 0 !important; }
+
+		.ve-flex-wrap {
+			gap: 5px;
+
+			> .m-1 { margin: 0 !important; }
+		}
 
 		/* The first subclass toggle button */
-		> div:nth-child(2) > button:first-child {
+		/*> div:nth-child(2) > button:first-child {
 			margin-left: 0 !important;
-		}
+		}*/
+
+		@media (width > 991px) { margin-top: -1px !important; }
 	}
 
 	.rd__hr--section {
