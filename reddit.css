@@ -75,8 +75,13 @@ div.side {
  */
 
 /* Outline instead of background change */
-.thing:has(> .res-selected) {
-	outline: 2px dashed rgb(106, 152, 175);
+.thing {
+	&:has(.res-selected) {
+		outline: 2px dashed rgba(106, 152, 175, 0.65);
+	}
+	&:has(> .res-selected) {
+		outline: 2px dashed rgb(106, 152, 175);
+	}
 }
 .res-nightmode .entry.res-selected {
 	&, .md-container { background-color: inherit !important; }
