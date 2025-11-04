@@ -2,11 +2,11 @@
 /**
  * Reddit Tweaks
  *
- * Last updated: 2024-12-01
+ * Last updated: 2025-11-03
  */
 
 /**
- * Global / multi-page
+ * MARK: Global / multi-page
  */
 
 /* Readbility tweaks */
@@ -61,12 +61,27 @@ body.listing-page {
 
 
 /**
- * Single
+ * MARK: Single
  */
 
 /* Fix sidebar overflow */
 div.side {
 	overflow: hidden;
 }
+
+
+/**
+ * MARK: RES Tweaks
+ */
+
+/* Outline instead of background change */
+.thing:has(> .res-selected) {
+	outline: 2px dashed rgb(106, 152, 175);
+}
+.res-nightmode .entry.res-selected {
+	&, .md-container { background-color: inherit !important; }
+}
+
+/* ./res-tweaks */
 
 }
