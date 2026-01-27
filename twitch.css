@@ -2,7 +2,7 @@
 /**
  * Twitch Tweaks
  *
- * Updated: 2025-03-02
+ * Updated: 2026-01-26
  */
 
 #bttv-picture-in-picture {
@@ -17,5 +17,9 @@
 .video-player video {
 	height: auto;
 }
+
+/* Horizontally center video in Theatre Mode */
+.video-ref:has(> video) { display: flex; }
+.video-ref > video { position: relative; }
 
 }
