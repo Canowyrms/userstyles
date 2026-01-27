@@ -2,7 +2,7 @@
 /**
  * YouTube Tweaks
  *
- * Updated: 2025-03-02
+ * Updated: 2026-01-26
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
@@ -33,5 +33,9 @@ span.ytp-caption-segment {
 	pointer-events: none !important;
 	overflow: initial !important;
 }
+
+/* Tweaks to Userstyle - https://userstyles.world/style/24215 */
+/* Play button */
+.ytp-delhi-modern .ytp-chrome-controls .ytp-play-button{ top: -4px; }
 
 }
