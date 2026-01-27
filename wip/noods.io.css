@@ -1,0 +1,34 @@
+@-moz-document domain("noods.io") {
+/**
+ * Noods.io Display and Print styles
+ *
+ * Updated: 2026-01-05
+ */
+
+label[for="notes"] + div > p {
+	white-space: pre-wrap;
+	max-width: 75ch
+}
+
+@media print {
+	/* Tag chips */
+	#root > div > div > div.flex.flex-col.gap-4.pb-20 > div.flex.gap-2.flex-wrap.w-full {
+		display: none !important;
+	}
+	/* Prep time / Cook time / Total time */
+	#root > div > div > div.flex.flex-col.gap-4.pb-20 > div:nth-child(4) {
+		display: none !important;
+	}
+	#root > div > div > div.flex.flex-col.gap-4.pb-20 > div:nth-child(5) > div > div > div:nth-child(2) {
+		align-items: flex-start;
+	}
+	button[aria-label="Decrease servings"],
+	button[aria-label="Increase servings"] {
+		display: none !important;
+	}
+	/* Cookmode toggle */
+	label[for="cookmode"] {
+		display: none !important;
+	}
+}
+}

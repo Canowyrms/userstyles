@@ -1,0 +1,121 @@
+@-moz-document domain("reddit.com") {
+/**
+ * WIP: (Old) Reddit Grid Layout
+ *
+ * Last updated: 2026-01-26
+ */
+
+/* Old Reddit only :) */
+html:has(#header) {
+	/**
+	 * MARK: Variables
+	 */
+
+	body {
+		/* Grid columns */
+		--bk-col-chooser: 0px;
+		--bk-col-main: 1fr;
+		--bk-col-sidebar: 300px;
+
+		/* Grid rows */
+		--bk-row-header: 65px;
+
+		&.with-listing-chooser {
+			--bk-col-chooser: 15px;
+
+			> .content {
+				transition: margin-left 0.25s ease 0s;
+			}
+		}
+	}
+
+	/* ./variables */
+
+
+	/**
+	 * MARK: Layout
+	 */
+
+	body {
+		display: grid;
+		/*grid-template:
+			[header-top] "header  header header"  var(--bk-row-header) [header-bottom]
+			[main-top]   "chooser main   sidebar"                      [main-bottom]
+			[footer-top] "footer  footer footer"                       [footer-bottom]
+			[debug-top]  "debug   debug  debug"                        [debug-bottom]
+			/ var(--bk-col-chooser) var(--bk-col-main) var(--bk-col-sidebar);*/
+		grid-template:
+			"header  header header"  var(--bk-row-header)
+			"chooser main   sidebar"
+			"footer  footer footer"
+			"debug   debug  debug"
+			/ var(--bk-col-chooser) var(--bk-col-main) var(--bk-col-sidebar);
+
+		grid-gap: 7px;
+
+		> * { 
+			display: none;
+			float: initial !important;
+		}
+
+		#header {
+			display: initial;
+			grid-area: header;
+			position: fixed;
+			width: 100%;
+		}
+		> .listing-chooser {
+			display: initial;
+			grid-area: chooser;
+			top: -7px !important;
+		}
+		> .content {
+			display: initial;
+			grid-area: main;
+			margin: 0;
+		}
+		> .side {
+			display: initial;
+			grid-area: sidebar;
+			margin: 0;
+			padding-right: 7px;
+			box-sizing: border-box;
+
+			> .spacer:first-child {
+				margin-top: 0;
+			}
+			#search input[type=text] {
+				max-width: 100%;
+			}
+		}
+		> .footer-parent {
+			display: initial;
+			grid-area: footer;
+		}
+		> .debuginfo {
+			display: initial;
+			grid-area: debug;
+		}
+		> a[name="content"] { display: none; }
+
+		.pinnable-content.pinned {
+			margin-top: 65px;
+			height: max-content !important;
+			min-height: 150px;
+			max-height: 50vh;
+			overflow-y: auto;
+
+			/*&, .top-matter { margin-top: 65px; }*/
+			.top-matter {
+				position: initial;
+			}
+			.reddit-video-player-root {
+				position: relative;
+			}
+		}
+	}
+
+	/* ./layout */
+}
+
+}
