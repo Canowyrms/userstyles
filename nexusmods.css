@@ -2,7 +2,7 @@
 /**
  * NexusMods Tweaks
  *
- * Last updated: 2026-01-27
+ * Last updated: 2026-01-28
  */
 
 /* Improve pagination display on mod browse pages. */
@@ -29,6 +29,8 @@ nav[aria-label="Pagination navigation"] {
 .next-container,
 .next-container-fluid {
 	max-width: 100%;
+	width: unset !important;
+	padding-inline: calc(var(--spacing) * 4) !important;
 }
 
 /* Bigger mod cards, thus, bigger mod card images. */
