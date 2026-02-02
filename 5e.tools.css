@@ -2,7 +2,7 @@
 /**
  * 5e Tools Tweaks
  *
- * Updated: 2025-08-27
+ * Updated: 2026-02-02
  */
 
 /**
@@ -248,6 +248,12 @@ button, input, select, textarea {
 .stats-tbl-ability-scores__lbl-spacer {
 	/*display: none;*/
 	padding: 0 5px !important;
+}
+
+/* Toast notifications */
+.toast__container {
+	height: auto;
+	min-height: 200px;
 }
 
 /**
