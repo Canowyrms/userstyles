@@ -2,7 +2,7 @@
 /**
  * NexusMods Tweaks
  *
- * Last updated: 2026-01-28
+ * Last updated: 2026-02-16
  */
 
 /* Improve pagination display on mod browse pages. */
@@ -35,7 +35,7 @@ nav[aria-label="Pagination navigation"] {
 
 /* Bigger mod cards, thus, bigger mod card images. */
 .mods-grid {
-	grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)) !important;
+	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
 	gap: 12px;
 }
 
