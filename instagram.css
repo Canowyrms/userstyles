@@ -2,7 +2,7 @@
 /**
  * Instagram Tweaks
  *
- * Updated: 2026-02-13
+ * Updated: 2026-02-21
  */
 
 /* Bigger reels */
@@ -25,6 +25,11 @@ section > main > div[class]:not([data-visualcompletion]) {
 /* Remove reel linear gradient */
 .x1ej3kyw {
 	background-image: none;
+}
+
+/* Explore page */
+.x7x3xai.x7x3xai {
+	@media (min-width: 736px) { margin-inline-end: 0 }
 }
 
 }
